@@ -18,11 +18,11 @@ var {Link, IndexLink} = require('react-router');
 
 var Navbar = React.createClass({
 
-  onSearch: function () {
+  onSearch: function (e) {
     e.preventDefault();
     alert('Not yet wired up!');
   },
-   render: function(){
+   render: function() {
        return (
 
          <div className="top-bar">
