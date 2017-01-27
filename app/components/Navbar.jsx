@@ -47,7 +47,7 @@ var Navbar = React.createClass({
 
                <ul className="menu">
                  <li>
-                   <input type="search" placeholder="Search weather"/>
+                   <input type="search" placeholder="Search weather by city name"/>
                  </li>
                  <li>
                    <input type="submit" className="button" value="Get Weather"/>
