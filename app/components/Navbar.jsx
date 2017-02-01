@@ -20,7 +20,15 @@ var Navbar = React.createClass({
 
   onSearch: function (e) {
     e.preventDefault();
-    alert('Not yet wired up!');
+
+    var location = this.refs.locationNav.value;
+    var encodedLocation = encodeURIComponent(location);
+
+    if (location.length > 0) {
+      this.refs.locationNav.value = '';
+      window.location .hash = '#/?location=' + encodedLocation;
+    }
+
   },
    render: function() {
        return (
@@ -47,7 +55,7 @@ var Navbar = React.createClass({
 
                <ul className="menu">
                  <li>
-                   <input type="search" placeholder="Search weather by city name"/>
+                   <input type="search" ref="locationNav" placeholder="Search weather by city name"/>
                  </li>
                  <li>
                    <input type="submit" className="button" value="Get Weather"/>
